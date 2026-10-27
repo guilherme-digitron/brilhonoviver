@@ -28,3 +28,13 @@ src/
 ├── pages/                     # cada arquivo vira uma rota
 └── styles/global.css
 ```
+
+## Publicar no GitHub Pages
+
+1. Suba o repositório no GitHub (branch `main`).
+2. Em **Settings → Pages**, escolha **Source: GitHub Actions**.
+3. A cada push na `main`, o workflow publica o site.
+
+`site` e `base` são calculados automaticamente a partir do nome do repositório
+(`astro.config.mjs`). Em links internos use `url('/rota')` (`src/lib/url.ts`)
+para funcionar tanto em `usuario.github.io/repo/` quanto localmente.
